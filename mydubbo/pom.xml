@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.jiangbo</groupId>
+  <artifactId>dubbo-mydemo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>dubbo-mydemo-api</module>
+    <module>dubbo-mydemo-provider</module>
+    <module>dubbo-mydemo-cusumer</module>
+    <module>dubbo-mydemo-consumer</module>
+  </modules>
+  
+  <dependencies>
+  	    <!-- spring核心包 begin-->
+    <dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-core</artifactId>
+	    <version>4.1.6.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-oxm</artifactId>
+	    <version>4.1.6.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-tx</artifactId>
+	    <version>4.1.6.RELEASE</version>
+	</dependency>
+	<dependency>
+    <groupId>org.springframework</groupId>
+	    <artifactId>spring-jdbc</artifactId>
+	    <version>4.1.6.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	    <version>4.1.6.RELEASE</version>
+	    <exclusions>
+	    	<exclusion>
+	    		<artifactId>spring-web</artifactId>
+	    		<groupId>org.springframework</groupId>
+	    	</exclusion>
+	    </exclusions>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-web</artifactId>
+	    <version>4.1.6.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-aop</artifactId>
+	    <version>4.1.6.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context-support</artifactId>
+	    <version>4.1.6.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-test</artifactId>
+	    <version>4.1.6.RELEASE</version>
+	</dependency>
+	<!-- spring核心包 end-->
+	
+	<!-- mybatis 核心包 begin-->
+	<dependency>
+	    <groupId>org.mybatis</groupId>
+	    <artifactId>mybatis</artifactId>
+	    <version>3.3.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.mybatis</groupId>
+	    <artifactId>mybatis-spring</artifactId>
+	    <version>1.2.2</version>
+	</dependency>
+	<!-- mybatis 核心包 end-->
+	
+	<!-- mysql 核心包 begin-->
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>5.1.38</version>
+	</dependency>
+	
+	<!-- 导入dbcp的jar包，用来在applicationContext.xml中配置数据库 -->  
+	<dependency>
+	    <groupId>commons-dbcp</groupId>
+	    <artifactId>commons-dbcp</artifactId>
+	    <version>1.4</version>
+	</dependency>
+	
+	<!-- JSTL标签类 -->  
+	<dependency>
+	    <groupId>jstl</groupId>
+	    <artifactId>jstl</artifactId>
+	    <version>1.2</version>
+	</dependency>
+	
+	<!-- 日志文件管理包 -->
+	<!-- log begin-->
+	
+	<!-- 格式化json对象 -->
+	<dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>fastjson</artifactId>
+	    <version>1.2.7</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.fasterxml.jackson.core</groupId>
+	    <artifactId>jackson-core</artifactId>
+	    <version>2.7.3</version>
+	</dependency>
+	<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+	    <artifactId>jackson-databind</artifactId>
+	    <version>2.7.3</version>
+	</dependency>
+	
+	<!-- lo4j -->
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-api</artifactId>
+	    <version>1.7.12</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-api</artifactId>
+	    <version>1.7.12</version>
+	</dependency>
+	<dependency>
+	    <groupId>log4j</groupId>
+	    <artifactId>log4j</artifactId>
+	    <version>1.2.17</version>
+	</dependency>
+	
+	<!-- log end -->
+	
+	<!-- 上传组件 -->
+	<dependency>
+	    <groupId>commons-fileupload</groupId>
+	    <artifactId>commons-fileupload</artifactId>
+	    <version>1.3.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>2.4</version>
+	</dependency>
+	
+	<!-- 通用的编码解码算法。MD5\SHA1BASE64,包括一些语音编码器，Hex,Base64 -->
+	<dependency>
+	    <groupId>commons-codec</groupId>
+	    <artifactId>commons-codec</artifactId>
+	    <version>1.10</version>
+	</dependency>
+	
+	<!-- dubbo -->
+	<dependency>  
+         <groupId>com.alibaba</groupId>  
+         <artifactId>dubbo</artifactId>  
+         <version>2.5.3</version>
+         <exclusions>
+         	<exclusion>
+         		<artifactId>spring</artifactId>
+         		<groupId>org.springframework</groupId>
+         	</exclusion>
+         </exclusions>
+	</dependency>  
+       
+      <dependency>  
+         <groupId>org.apache.zookeeper</groupId>  
+		<artifactId>zookeeper</artifactId>  
+		<version>3.4.6</version>
+		<exclusions>
+			<exclusion>
+				<artifactId>log4j</artifactId>
+				<groupId>log4j</groupId>
+			</exclusion>
+		</exclusions>
+      </dependency>  
+  
+	   <dependency>  
+	     <groupId>com.github.sgroschupf</groupId>  
+		<artifactId>zkclient</artifactId>  
+		<version>0.1</version>
+		<exclusions>
+			<exclusion>
+				<artifactId>log4j</artifactId>
+				<groupId>log4j</groupId>
+			</exclusion>
+		</exclusions>
+	   </dependency>
+	
+  </dependencies>
+</project>
